@@ -9,16 +9,18 @@ var msg = document.querySelector(".msg");
 var button = document.querySelector("#bt");
 var regex = /^[a-z 0-9 à-ú À-Ú ]+$/i;
 button ? button.addEventListener("click", function (ev) {
-  ev.preventDefault();
   selectVal.forEach(function (e) {
     if (!textArea.value) {
+      ev.preventDefault();
       msg.innerHTML = "Campo vazio";
       return;
     }
     if (!regex.test(textArea.value)) {
+      ev.preventDefault();
       msg.innerHTML = "Não pode usar caracter especial";
       return;
     } else {
+      //   ev.preventDefault();
       msg.innerHTML = "";
       window.location.href = "/tarefas";
     }

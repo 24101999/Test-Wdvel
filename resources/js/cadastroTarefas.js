@@ -5,16 +5,18 @@ const button = document.querySelector("#bt");
 const regex = /^[a-z 0-9 à-ú À-Ú ]+$/i;
 button
     ? button.addEventListener("click", (ev) => {
-          ev.preventDefault();
           selectVal.forEach((e) => {
               if (!textArea.value) {
+                  ev.preventDefault();
                   msg.innerHTML = "Campo vazio";
                   return;
               }
               if (!regex.test(textArea.value)) {
+                  ev.preventDefault();
                   msg.innerHTML = "Não pode usar caracter especial";
                   return;
               } else {
+                  //   ev.preventDefault();
                   msg.innerHTML = "";
                   window.location.href = "/tarefas";
               }

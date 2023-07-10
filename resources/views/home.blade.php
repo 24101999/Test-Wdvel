@@ -1,6 +1,5 @@
 @extends('layout')
 
-
 <div class="d-flex flex-column p-3 gap-3 ">
     <h1 class="text-center">Tarefas</h1>
     <div class=" d-flex justify-content-center gap-2">
